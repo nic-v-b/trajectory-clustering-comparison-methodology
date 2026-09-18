@@ -1,6 +1,9 @@
 # Trajectory Clustering Comparison Methodology
 
-Reference implementation for a comparative aircraft-trajectory clustering study using real-world ADS-B data.
+Reference implementation accompanying the peer-reviewed article:
+
+**N. Vincent-Boulay and C. Marsden, "A comparative evaluation methodology of unsupervised clustering algorithms for ADS-B trajectory-based aircraft behavior analysis," _Computing and Artificial Intelligence_, vol. 4, no. 2, article 4416, 2026.**  
+DOI: https://doi.org/10.59400/cai4416
 
 ## Overview
 
@@ -15,10 +18,16 @@ Candidate solutions are evaluated with standard internal clustering metrics toge
 
 The original study used a representative five-hour LaGuardia-area ADS-B dataset containing 343 processed aircraft trajectories. That research dataset is not redistributed here. A deterministic synthetic dataset and test suite are included so the methodology can be exercised without the original data.
 
+<p align="center">
+  <img src="docs/2.png" alt="Methodology overview for the trajectory clustering comparison" width="900">
+</p>
+
+<p align="center"><em>Figure 1. Methodology overview. Reproduced from Vincent-Boulay and Marsden (2026), <a href="https://doi.org/10.59400/cai4416">A comparative evaluation methodology of unsupervised clustering algorithms for ADS-B trajectory-based aircraft behavior analysis</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</em></p>
+
 ## What this repository demonstrates
 
-- preparation of equal-length multivariate aircraft trajectories;
-- flattening of trajectory time series into model-ready feature vectors;
+- interpolation of multivariate aircraft trajectories to the paper's 64-point common sequence length;
+- construction of model-ready vectors from X/Y/Z sequences plus trajectory duration and original point count;
 - standardized preprocessing for distance-based clustering;
 - K-means, DBSCAN, HDBSCAN, and GMM candidate fitting;
 - silhouette, Davies-Bouldin, and Calinski-Harabasz evaluation;
@@ -46,6 +55,7 @@ The original study used a representative five-hour LaGuardia-area ADS-B dataset 
 │   ├── test_preprocessing.py
 │   └── test_models.py
 └── docs/
+    ├── 2.png
     ├── REPRODUCIBILITY.md
     └── RESEARCH_CODE_PROVENANCE.md
 ```
@@ -86,7 +96,17 @@ Internal clustering metrics quantify properties of a candidate partition; they d
 
 ## Citation
 
-The associated manuscript citation will be added when its final bibliographic information is available. A machine-readable repository citation is provided in `CITATION.cff`.
+If this repository or methodology is useful in your work, please cite:
+
+```text
+N. Vincent-Boulay and C. Marsden,
+"A comparative evaluation methodology of unsupervised clustering algorithms
+for ADS-B trajectory-based aircraft behavior analysis,"
+Computing and Artificial Intelligence, vol. 4, no. 2, article 4416, 2026.
+https://doi.org/10.59400/cai4416
+```
+
+A machine-readable citation is provided in `CITATION.cff`.
 
 ## Author
 

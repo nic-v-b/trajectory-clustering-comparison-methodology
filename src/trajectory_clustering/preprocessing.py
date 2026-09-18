@@ -1,7 +1,7 @@
 """Equal-length trajectory interpolation and feature construction."""
 
 from dataclasses import dataclass
-from typing import Iterable, Sequence
+from typing import Sequence
 
 import numpy as np
 import pandas as pd
@@ -15,7 +15,7 @@ class TrajectoryPreprocessor:
     id_column: str = "icao24"
     feature_columns: Sequence[str] = ("X", "Y", "Z")
     time_column: str = "time"
-    sequence_length: int = 60
+    sequence_length: int = 64
     scale: bool = True
     min_points_per_trajectory: int = 2
 
@@ -75,7 +75,7 @@ class TrajectoryPreprocessor:
                 for values in feature_arrays
             ]
 
-        return np.concatenate(sequences), duration_s, n_points
+        return np.concatenate([*sequences, [duration_s, float(n_points)]]), duration_s, n_points
 
     def fit_transform(
         self,

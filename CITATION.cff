@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite this repository and the associated manuscript when bibliographic details are available."
+message: "If you use this software or methodology, please cite the associated paper."
 title: "Trajectory Clustering Comparison Methodology"
 type: software
 authors:
@@ -7,3 +7,16 @@ authors:
     given-names: "Nicolas"
 repository-code: "https://github.com/nic-v-b/trajectory-clustering-comparison-methodology"
 version: "0.1.0"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Vincent-Boulay"
+      given-names: "Nicolas"
+    - family-names: "Marsden"
+      given-names: "Catharine"
+  title: "A comparative evaluation methodology of unsupervised clustering algorithms for ADS-B trajectory-based aircraft behavior analysis"
+  journal: "Computing and Artificial Intelligence"
+  volume: 4
+  issue: 2
+  year: 2026
+  doi: "10.59400/cai4416"
