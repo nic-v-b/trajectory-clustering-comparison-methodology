@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite this repository and the associated manuscript when bibliographic details are available."
+title: "Trajectory Clustering Comparison Methodology"
+type: software
+authors:
+  - family-names: "Vincent-Boulay"
+    given-names: "Nicolas"
+repository-code: "https://github.com/nic-v-b/trajectory-clustering-comparison-methodology"
+version: "0.1.0"

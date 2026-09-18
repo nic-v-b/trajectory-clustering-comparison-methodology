@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trajectory-clustering-comparison"
+version = "0.1.0"
+description = "Reference implementation for comparative clustering of aircraft trajectories."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Nicolas Vincent-Boulay"}]
+dependencies = [
+    "numpy>=1.24,<3",
+    "pandas>=2.0,<3",
+    "scikit-learn>=1.4,<2",
+    "hdbscan>=0.8.40,<0.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

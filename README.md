@@ -55,7 +55,7 @@ The original study used a representative five-hour LaGuardia-area ADS-B dataset 
 Install the direct dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -e ".[dev]"
 ```
 
 Run the synthetic comparison:
@@ -72,7 +72,7 @@ pytest -q
 
 ## Relationship to the research code
 
-This repository is a cleaned **reference implementation** of the comparison methodology rather than a bit-for-bit copy of the larger PhD research repository. It preserves the core algorithm families, trajectory representation, evaluation metrics, and treatment of noise while removing unrelated thesis orchestration and aircraft-categorization interpretation code.
+This repository is a **reference implementation** of the comparison methodology presented in the associated paper. This research subsequently evolved as part of a larger PhD airspace modeling project. This code preserves the core algorithm families, trajectory representation, evaluation metrics, and treatment of noise while removing unrelated thesis orchestration and aircraft-categorization interpretation code.
 
 The earlier public repository `aircraft-behaviour-categorization-model` corresponds to a different published study focused on aircraft categorization using clustering. This repository is intentionally narrower: its purpose is the **comparative clustering methodology** itself.
 
