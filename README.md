@@ -55,7 +55,7 @@ The original study used a representative five-hour LaGuardia-area ADS-B dataset 
 Install the direct dependencies:
 
 ```bash
-pip install -r requirements.txt
+pip install -e ".[dev]"
 ```
 
 Run the synthetic comparison:
