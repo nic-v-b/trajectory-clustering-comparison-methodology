@@ -59,7 +59,7 @@ def main() -> None:
         id_column="trajectory_id",
         feature_columns=("X", "Y", "Z"),
         time_column="time",
-        sequence_length=60,
+        sequence_length=64,
         scale=True,
     )
     X, metadata = preprocessor.fit_transform(observations)
