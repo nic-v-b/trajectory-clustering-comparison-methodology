@@ -18,10 +18,16 @@ Candidate solutions are evaluated with standard internal clustering metrics toge
 
 The original study used a representative five-hour LaGuardia-area ADS-B dataset containing 343 processed aircraft trajectories. That research dataset is not redistributed here. A deterministic synthetic dataset and test suite are included so the methodology can be exercised without the original data.
 
+<p align="center">
+  <img src="docs/2.png" alt="Methodology overview for the trajectory clustering comparison" width="900">
+</p>
+
+<p align="center"><em>Figure 1. Methodology overview. Reproduced from Vincent-Boulay and Marsden (2026), <a href="https://doi.org/10.59400/cai4416">A comparative evaluation methodology of unsupervised clustering algorithms for ADS-B trajectory-based aircraft behavior analysis</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</em></p>
+
 ## What this repository demonstrates
 
-- preparation of equal-length multivariate aircraft trajectories;
-- flattening of trajectory time series into model-ready feature vectors;
+- interpolation of multivariate aircraft trajectories to the paper's 64-point common sequence length;
+- construction of model-ready vectors from X/Y/Z sequences plus trajectory duration and original point count;
 - standardized preprocessing for distance-based clustering;
 - K-means, DBSCAN, HDBSCAN, and GMM candidate fitting;
 - silhouette, Davies-Bouldin, and Calinski-Harabasz evaluation;
@@ -49,6 +55,7 @@ The original study used a representative five-hour LaGuardia-area ADS-B dataset 
 │   ├── test_preprocessing.py
 │   └── test_models.py
 └── docs/
+    ├── 2.png
     ├── REPRODUCIBILITY.md
     └── RESEARCH_CODE_PROVENANCE.md
 ```
