@@ -27,11 +27,11 @@ jobs:
           from bs4 import BeautifulSoup
           from pathlib import Path
 
-          doi_url = "https://doi.org/10.59400/cai4416"
+          doi_url = "https://ojs.acad-pub.com/index.php/CAI/article/view/4416"
           headers = {"User-Agent": "Mozilla/5.0"}
           landing = requests.get(doi_url, headers=headers, timeout=60)
           landing.raise_for_status()
-          print("Resolved DOI landing page:", landing.url)
+          print("Publisher article landing page:", landing.url)
 
           soup = BeautifulSoup(landing.text, "html.parser")
           pdf_url = None
