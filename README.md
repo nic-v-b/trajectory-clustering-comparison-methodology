@@ -1,6 +1,9 @@
 # Trajectory Clustering Comparison Methodology
 
-Reference implementation for a comparative aircraft-trajectory clustering study using real-world ADS-B data.
+Reference implementation accompanying the peer-reviewed article:
+
+**N. Vincent-Boulay and C. Marsden, "A comparative evaluation methodology of unsupervised clustering algorithms for ADS-B trajectory-based aircraft behavior analysis," _Computing and Artificial Intelligence_, vol. 4, no. 2, article 4416, 2026.**  
+DOI: https://doi.org/10.59400/cai4416
 
 ## Overview
 
@@ -86,7 +89,17 @@ Internal clustering metrics quantify properties of a candidate partition; they d
 
 ## Citation
 
-The associated manuscript citation will be added when its final bibliographic information is available. A machine-readable repository citation is provided in `CITATION.cff`.
+If this repository or methodology is useful in your work, please cite:
+
+```text
+N. Vincent-Boulay and C. Marsden,
+"A comparative evaluation methodology of unsupervised clustering algorithms
+for ADS-B trajectory-based aircraft behavior analysis,"
+Computing and Artificial Intelligence, vol. 4, no. 2, article 4416, 2026.
+https://doi.org/10.59400/cai4416
+```
+
+A machine-readable citation is provided in `CITATION.cff`.
 
 ## Author
 
